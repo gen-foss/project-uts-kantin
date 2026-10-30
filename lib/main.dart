@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Pencatat Menu Kantin',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.teal, useMaterial3: true),
+      theme: ThemeData(primarySwatch: Colors.deepPurple, useMaterial3: true),
       home: const DaftarMenuPage(),
     );
   }
@@ -56,7 +56,7 @@ class _DaftarMenuPageState extends State<DaftarMenuPage> {
           weight: FontWeight.w600,
           color: Colors.white,
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.deepPurple,
         centerTitle: true,
       ),
       body: Column(
@@ -67,7 +67,7 @@ class _DaftarMenuPageState extends State<DaftarMenuPage> {
               'Total ${_daftarMenu.length} menu tersedia',
               size: 16,
               weight: FontWeight.w500,
-              color: Colors.teal.shade700,
+              color: Colors.deepPurple.shade700,
             ),
           ),
           Expanded(
@@ -85,7 +85,7 @@ class _DaftarMenuPageState extends State<DaftarMenuPage> {
                   child: ListTile(
                     leading: const Icon(
                       Icons.restaurant_menu,
-                      color: Colors.teal,
+                      color: Colors.deepPurple,
                       size: 28,
                     ),
                     title: AppText(
@@ -100,7 +100,7 @@ class _DaftarMenuPageState extends State<DaftarMenuPage> {
                     ),
                     trailing: const Icon(
                       Icons.chevron_right,
-                      color: Colors.teal,
+                      color: Colors.deepPurple,
                     ),
                     onTap: () {
                       Get.to(() => DetailMenuPage(menu: menu));
@@ -119,7 +119,7 @@ class _DaftarMenuPageState extends State<DaftarMenuPage> {
             _tambahMenu(hasil);
           }
         },
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.deepPurple,
         child: const Icon(Icons.add, color: Colors.white),
       ),
     );
@@ -142,7 +142,7 @@ class DetailMenuPage extends StatelessWidget {
           weight: FontWeight.w600,
           color: Colors.white,
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.deepPurple,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
@@ -161,7 +161,11 @@ class DetailMenuPage extends StatelessWidget {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.fastfood, size: 80, color: Colors.teal),
+                  const Icon(
+                    Icons.fastfood,
+                    size: 80,
+                    color: Colors.deepPurple,
+                  ),
                   const SizedBox(height: 20),
                   AppText(
                     menu.nama,
@@ -174,7 +178,7 @@ class DetailMenuPage extends StatelessWidget {
                     'Rp ${menu.harga.toString().replaceAllMapped(RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]}.')}',
                     size: 20,
                     weight: FontWeight.w600,
-                    color: Colors.teal.shade700,
+                    color: Colors.deepPurple.shade700,
                   ),
                   const SizedBox(height: 24),
                   ElevatedButton.icon(
@@ -187,7 +191,7 @@ class DetailMenuPage extends StatelessWidget {
                       color: Colors.white,
                     ),
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.teal,
+                      backgroundColor: Colors.deepPurple,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 24,
                         vertical: 12,
@@ -244,7 +248,7 @@ class _TambahMenuPageState extends State<TambahMenuPage> {
           weight: FontWeight.w600,
           color: Colors.white,
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.deepPurple,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () => Get.back(),
@@ -303,7 +307,7 @@ class _TambahMenuPageState extends State<TambahMenuPage> {
                 child: ElevatedButton(
                   onPressed: _simpanMenu,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.teal,
+                    backgroundColor: Colors.deepPurple,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-/// Alasan desain: Menggunakan GoogleFonts.Poppins karena font ini modern,
-/// mudah dibaca, dan cocok untuk aplikasi kantin yang bersih & ramah pengguna.
-/// Parameter size & weight memungkinkan reusability tanpa mengorbankan konsistensi.
+/// Alasan desain: Menggunakan GoogleFonts.Outfit karena font ini modern,
+/// bersih, dan sangat mudah dibaca di layar mobile. Cocok untuk aplikasi
+/// kantin yang ingin tampil sederhana namun profesional.
 class AppText extends StatelessWidget {
   final String text;
   final double size;
@@ -25,7 +25,7 @@ class AppText extends StatelessWidget {
     return Text(
       text,
       textAlign: textAlign,
-      style: GoogleFonts.poppins(
+      style: GoogleFonts.outfit(
         fontSize: size,
         fontWeight: weight,
         color: color ?? Colors.black87,
